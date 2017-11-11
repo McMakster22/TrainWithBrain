@@ -17,14 +17,15 @@ public class MainActivity extends AppCompatActivity {
     Date currentTime = Calendar.getInstance().getTime();
     MainCustomAdapter customAdapeter;
     ListView listView;
-
+String stuff = "Shit";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_list_routines);
 
         final ArrayList<MainArrayListRoutine> arrayList = new ArrayList<MainArrayListRoutine>();
+        arrayList.add(new MainArrayListRoutine(stuff,currentTime));
         arrayList.add(new MainArrayListRoutine("Muscle Up Routine",currentTime));
 
         customAdapeter = new MainCustomAdapter (this, arrayList);

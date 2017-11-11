@@ -36,8 +36,6 @@ public class MainCustomAdapter extends  ArrayAdapter<MainArrayListRoutine> {
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.name);
         nameTextView.setText(currentMainListView.getName());
 
-
-
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
         dateTextView.setText(""+currentMainListView.getDate());
 

@@ -11,13 +11,11 @@ public class MainArrayListRoutine {
     private String name;
     private Date date;
 
-    public MainArrayListRoutine(String s, Date date) {
+    public MainArrayListRoutine(String name, Date date) {
         this.date = date;
-    }
-
-    public MainArrayListRoutine(String name) {
         this.name = name;
     }
+
 
     public String getName() {
         return name;
