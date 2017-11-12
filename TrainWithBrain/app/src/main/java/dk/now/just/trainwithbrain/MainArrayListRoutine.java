@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by Mir on 11/11/2017.
  */
 
-public class MainArrayListRoutine {
+public class MainArrayListRoutine implements java.io.Serializable {  // allows to serialize
 
     private String name;
     private Date date;
