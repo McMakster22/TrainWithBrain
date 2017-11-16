@@ -2,4 +2,6 @@
     <string name="app_name">TrainWithBrain</string>
     <string name="title_activity_routines">Routines</string>
     <string name="title_activity_add_routine">AddRoutine</string>
+    <string name="action_favorite">Home Button</string>
+    <string name="action_add">Add Button</string>
 </resources>

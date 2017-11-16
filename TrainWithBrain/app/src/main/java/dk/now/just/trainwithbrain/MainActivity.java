@@ -8,7 +8,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_list_routines);
+        setContentView(R.layout.activity_main);
         // receiving values from database and uploading to adapter
         DbClass dbclass = new DbClass(this);
         SQLiteDatabase db = dbclass.getWritableDatabase();
@@ -98,6 +101,8 @@ public class MainActivity extends AppCompatActivity  {
         insert();
 
 
+
+
         arrayList = Ssingl.getInstance().getArray();
         customAdapeter = new MainCustomAdapter (this, arrayList);
         listView = (ListView) findViewById(R.id.list);
@@ -119,8 +124,6 @@ public class MainActivity extends AppCompatActivity  {
             v = listView.getChildAt(i);
             delete = v.findViewById(R.id.delete);
             delete.setOnClickListener(addClick);
-
-
 
         }
 
@@ -188,10 +191,33 @@ public class MainActivity extends AppCompatActivity  {
         btn = (Button)findViewById(R.id.button2);
         btn.setOnClickListener(addClick);
 
+        Toolbar myToolbar = (Toolbar)findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
         };
 
 
+        //Iteration with the Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_add:
+
+                Intent intent = new Intent(MainActivity.this,AddRoutine.class);
+                intent.putExtra("arrayList",arrayList);
+                startActivity(intent);
+
+                return true;
+        default:
+        return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onPause() {
@@ -241,5 +267,9 @@ public class MainActivity extends AppCompatActivity  {
 
         }
     }
+
+
+
+
 
 }
