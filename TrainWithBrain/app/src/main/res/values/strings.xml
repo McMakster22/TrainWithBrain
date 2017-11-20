@@ -4,4 +4,15 @@
     <string name="title_activity_add_routine">AddRoutine</string>
     <string name="action_favorite">Home Button</string>
     <string name="action_add">Add Button</string>
+    <string name="title_activity_accordeon">Accordeon</string>
+
+    <string-array name="DaysOfWeek">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thurdsday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
 </resources>

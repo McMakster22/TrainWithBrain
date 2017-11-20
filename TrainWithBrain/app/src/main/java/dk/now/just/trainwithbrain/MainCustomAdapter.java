@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 
 /**
  * Created by Mir on 11/11/2017.
@@ -56,14 +58,10 @@ public class MainCustomAdapter extends  ArrayAdapter<MainArrayListRoutine> {
         dateTextView.setText(""+currentMainListView.getDate1());
 
 
+        Button button = listItemView.findViewById(R.id.delete);
+        button.setTag(currentMainListView.getId());
 
-//        listItemView.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //Toast.makeText(getContext(), "Row " + position + " was clicked!", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
 
         return listItemView;
 

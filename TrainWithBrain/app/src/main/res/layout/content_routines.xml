@@ -1,11 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="dk.now.just.trainwithbrain.Routines"
-    tools:showIn="@layout/activity_routines">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:layout_marginTop="60dp">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/Nday"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#97acff"
+        android:fontFamily="monospace"
+        android:text="DAY"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/muscleG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:background="#cacccf"
+        android:text="Muscle Group"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.04">
+
+        <TextView
+            android:id="@+id/Ex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nset"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/Nrow"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <TextView
+            android:id="@+id/Nweight"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Weight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Ex1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nset1"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/Nrow1"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <EditText
+            android:id="@+id/Nweight1"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Ex2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nset2"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/Nrow2"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <EditText
+            android:id="@+id/Nweight2"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Nday2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="0.02"
+        android:background="#97acff"
+        android:fontFamily="monospace"
+        android:text="DAY"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/muscleG2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:background="#cacccf"
+        android:text="Muscle Group"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ExN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/NsetN"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/NrowN"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <TextView
+            android:id="@+id/NweightN"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Weight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Ex3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nset3"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/Nrow3"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <EditText
+            android:id="@+id/Nweight3"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Ex4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="128.31"
+            android:text="Exercise"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nset4"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:gravity="center"
+            android:text="Sets" />
+
+        <TextView
+            android:id="@+id/Nrow4"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:text="Rows" />
+
+        <EditText
+            android:id="@+id/Nweight4"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="number"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--tools:context="dk.now.just.trainwithbrain.Routines"-->
+    <!--tools:showIn="@layout/activity_routines">-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/detaillist"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+
+        <!--android:layout_marginBottom="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.0"-->
+
+
+        <!--/>-->
+<!--</android.support.constraint.ConstraintLayout>-->
