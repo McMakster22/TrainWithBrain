@@ -21,11 +21,15 @@
         <activity
             android:name=".Routines"
             android:label="@string/title_activity_routines"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
         <activity
             android:name=".AddRoutine"
             android:label="@string/title_activity_add_routine"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".TimerActivity"
+            android:label="@string/title_activity_timer"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

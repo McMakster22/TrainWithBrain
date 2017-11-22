@@ -31,6 +31,7 @@ import static dk.now.just.trainwithbrain.R.id.Set4;
 import static dk.now.just.trainwithbrain.R.id.Sets2;
 import static dk.now.just.trainwithbrain.R.id.name;
 import static dk.now.just.trainwithbrain.R.id.spinner;
+import static dk.now.just.trainwithbrain.R.id.spinner2;
 
 
 public class AddRoutine extends MainActivity implements java.io.Serializable {
@@ -101,7 +102,7 @@ public class AddRoutine extends MainActivity implements java.io.Serializable {
         public void onClick(View view) {
             addN = (EditText) findViewById(name);
             weekoftheday1 =(Spinner) findViewById(spinner);
-            weekoftheday2 = (Spinner) findViewById(spinner);
+            weekoftheday2 = (Spinner) findViewById(spinner2);
             musclegroup1 = (EditText) findViewById(MuscleGroup1);
             musclegroup2 = (EditText) findViewById(MuscleGroup2);
             exercise1 = (EditText) findViewById(Exercise1);

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    android:layout_marginTop="60dp">
+    android:layout_marginTop="56dp">
 
     <TextView
         android:id="@+id/Nday"
@@ -36,33 +37,37 @@
         <TextView
             android:id="@+id/Ex"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="128.31"
+            android:background="@android:color/holo_blue_dark"
             android:text="Exercise"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Nset"
-            android:layout_width="83dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.05"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="128.28"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Sets" />
 
         <TextView
             android:id="@+id/Nrow"
             android:layout_width="83dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.03"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Rows" />
 
         <TextView
             android:id="@+id/Nweight"
             android:layout_width="83dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.03"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Weight" />
     </LinearLayout>
@@ -180,8 +185,9 @@
         <TextView
             android:id="@+id/ExN"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="128.31"
+            android:background="@android:color/holo_blue_dark"
             android:text="Exercise"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -189,24 +195,27 @@
         <TextView
             android:id="@+id/NsetN"
             android:layout_width="83dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.05"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Sets" />
 
         <TextView
             android:id="@+id/NrowN"
             android:layout_width="83dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.03"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Rows" />
 
         <TextView
             android:id="@+id/NweightN"
             android:layout_width="83dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.03"
+            android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:text="Weight" />
     </LinearLayout>

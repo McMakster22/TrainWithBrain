@@ -170,11 +170,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(final AdapterView<?> adapterView, View view, int i, long l) {
 
-                TextView nameTextView = (TextView) findViewById(R.id.Ex1);
-                //view.getTag();
-                // int j =(int)view.getTag();
-
-
                 for (int z = 0; z <= arrayList.size(); z++) {
 
                     if (arrayList.get(z).getId() == i) {
@@ -288,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
     ;
 
 
-    //Iteration with the Menu
+    //Iteration with ToolBAR
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -299,15 +294,28 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_favorite:
+                Intent home = new Intent(MainActivity.this, MainActivity.class);
+                home.putExtra("arrayList", arrayList);
+                finish();
+                startActivity(home);
+                return true;
 
 
             case R.id.action_add:
-
-                Intent intent = new Intent(MainActivity.this, AddRoutine.class);
-                intent.putExtra("arrayList", arrayList);
-                startActivity(intent);
+//
+                Intent add = new Intent(MainActivity.this, AddRoutine.class);
+                add.putExtra("arrayList", arrayList);
+                startActivity(add);
 
                 return true;
+            case R.id.action_timer:
+
+                Intent time = new Intent(MainActivity.this, TimerActivity.class);
+                time.putExtra("arrayList", arrayList);
+                startActivity(time);
+
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -316,11 +324,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-//        bul = true;
-//        SharedPreferences pref = getSharedPreferences("Mypref", MODE_PRIVATE);
-//        SharedPreferences.Editor editor = pref.edit();
-//        editor.putBoolean("tru",bul);
-//        editor.apply();
 
 
     }

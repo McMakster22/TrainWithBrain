@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dk.now.just.trainwithbrain.AddRoutine">
+    tools:context="dk.now.just.trainwithbrain.TimerActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -17,28 +17,14 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorBackgroundFloating"
             android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Light" />
+            app:theme="@style/ThemeOverlay.AppCompat.Light"
 
-
-        <!--<android.support.v7.widget.Toolbar-->
-
-        <!--android:id="@+id/my_toolbar"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="56dp"-->
-        <!--android:background="?attr/colorBackgroundFloating"-->
-        <!--android:elevation="4dp"-->
-        <!--android:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!---->
-        <!--tools:layout_editor_absoluteY="-4dp" />-->
+            />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_add_routine" />
+    <include layout="@layout/content_timer" />
 
 
 </android.support.design.widget.CoordinatorLayout>
+
