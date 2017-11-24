@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -33,6 +34,11 @@ public class Routines extends MainActivity {
     TextView rep2;
     TextView rep3;
     TextView rep4;
+
+    EditText kg1;
+    EditText kg2;
+    EditText kg3;
+    EditText kg4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +91,20 @@ public class Routines extends MainActivity {
         rep4 = (TextView) findViewById(R.id.Nrow4);
         int ryt4 =getIntent().getIntExtra("rep4",0 );
         rep4.setText(""+ryt4);
+
+
+        kg1 = (EditText) findViewById(R.id.Nweight1);
+        int kkg1 =getIntent().getIntExtra("kg1",0 );
+        kg1.setText(""+kkg1 +"Kg" );
+        kg2 = (EditText) findViewById(R.id.Nweight2);
+        int kkg2 =getIntent().getIntExtra("kg2",0 );
+        kg2.setText(""+kkg2 +"Kg" );
+        kg3 = (EditText) findViewById(R.id.Nweight3);
+        int kkg3 =getIntent().getIntExtra("kg3",0 );
+        kg3.setText(""+kkg3 +"Kg" );
+        kg4 = (EditText) findViewById(R.id.Nweight4);
+        int kkg4 =getIntent().getIntExtra("kg4",0 );
+        kg4.setText(""+kkg4 +"Kg" );
 
 
 

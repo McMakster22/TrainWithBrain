@@ -11,12 +11,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbClass extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABSE_NAME = "FeedReader4.db";
+    public static final String DATABASE_NAME = "NewOne.db";
 
 
 
     public DbClass(Context context) {
-        super(context, DATABSE_NAME, null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
@@ -27,8 +27,10 @@ public class DbClass extends SQLiteOpenHelper {
                 + DBContractClass.RoutinesEntry.WEEKDAY2 +" TEXT, "  + DBContractClass.RoutinesEntry.MuscleGroup1 +" TEXT, "  + DBContractClass.RoutinesEntry.MuscleGroup2 +" TEXT, "  +
                 DBContractClass.RoutinesEntry.Exercise1 +" TEXT, " + DBContractClass.RoutinesEntry.Exercise2 +" TEXT, "  + DBContractClass.RoutinesEntry.Exercise3 +" TEXT, "
                 + DBContractClass.RoutinesEntry.Exercise4 +" TEXT, "  + DBContractClass.RoutinesEntry.Set1 +" INTEGER , " + DBContractClass.RoutinesEntry.Set2 +" INTEGER , "
-                + DBContractClass.RoutinesEntry.Set3 +" INTEGER , " + DBContractClass.RoutinesEntry.Set4 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep1 +" INTEGER, "
-                + DBContractClass.RoutinesEntry.Rep2 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep3 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep4 +" INTEGER );";
+                + DBContractClass.RoutinesEntry.Set3 +" INTEGER , " + DBContractClass.RoutinesEntry.Set4 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep1 +" INTEGER , "
+                + DBContractClass.RoutinesEntry.Rep2 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep3 +" INTEGER , " + DBContractClass.RoutinesEntry.Rep4 +" INTEGER , "
+                + DBContractClass.RoutinesEntry.Kg1 +" INTEGER , "  + DBContractClass.RoutinesEntry.Kg2 +" INTEGER , " + DBContractClass.RoutinesEntry.Kg3 +" INTEGER , "
+                + DBContractClass.RoutinesEntry.Kg4 +" INTEGER );";
 
         sqLiteDatabase.execSQL(SQL_CREATE_ENTRIES);
     }

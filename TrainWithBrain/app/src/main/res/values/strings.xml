@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">TrainWithBrain</string>
+    <string name="app_name">Train With Brain</string>
     <string name="title_activity_routines">Routines</string>
-    <string name="title_activity_add_routine">AddRoutine</string>
+    <string name="title_activity_add_routine">Adding Routine</string>
     <string name="action_favorite">Home Button</string>
     <string name="action_add">Add Button</string>
     <string name="action_timer">Stop Watch Button</string>
@@ -16,5 +16,5 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
-    <string name="title_activity_timer">TimerActivity</string>
+    <string name="title_activity_timer">Stop Watch</string>
 </resources>

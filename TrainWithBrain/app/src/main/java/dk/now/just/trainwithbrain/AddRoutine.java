@@ -19,8 +19,12 @@ import static dk.now.just.trainwithbrain.R.id.Exercise1;
 import static dk.now.just.trainwithbrain.R.id.Exercise2;
 import static dk.now.just.trainwithbrain.R.id.Exercise3;
 import static dk.now.just.trainwithbrain.R.id.Exercise4;
+import static dk.now.just.trainwithbrain.R.id.Kg2;
+import static dk.now.just.trainwithbrain.R.id.Kg3;
+import static dk.now.just.trainwithbrain.R.id.Kg4;
 import static dk.now.just.trainwithbrain.R.id.MuscleGroup1;
 import static dk.now.just.trainwithbrain.R.id.MuscleGroup2;
+import static dk.now.just.trainwithbrain.R.id.Kg1;
 import static dk.now.just.trainwithbrain.R.id.Rep1;
 import static dk.now.just.trainwithbrain.R.id.Rep2;
 import static dk.now.just.trainwithbrain.R.id.Rep3;
@@ -60,15 +64,17 @@ public class AddRoutine extends MainActivity implements java.io.Serializable {
     EditText rep2;
     EditText rep3;
     EditText rep4;
+    EditText kg1;
+    EditText kg2;
+    EditText kg3;
+    EditText kg4;
 
 
-
-    //DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRANCE);
 
     // Get the date today using Calendar object.
     Date today = Calendar.getInstance().getTime();
     // Using DateFormat format method we can create a string
-// representation of a date with the defined format.
+    // representation of a date with the defined format.
     String reportDate = df.format(today);
 
     @Override
@@ -86,6 +92,7 @@ public class AddRoutine extends MainActivity implements java.io.Serializable {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.DaysOfWeek, android.R.layout.simple_spinner_item);
@@ -117,6 +124,10 @@ public class AddRoutine extends MainActivity implements java.io.Serializable {
             rep2 = (EditText) findViewById(Rep2);
             rep3 = (EditText) findViewById(Rep3);
             rep4 = (EditText) findViewById(Rep4);
+            kg1 = (EditText)findViewById(Kg1);
+            kg2 = (EditText)findViewById(Kg2);
+            kg3 = (EditText)findViewById(Kg3);
+            kg4 = (EditText)findViewById(Kg4);
 
 
             Ssingl.getInstance().getArray().add(new MainArrayListRoutine(addN.getText().toString(), reportDate, Ssingl.getInstance().getArray().size(),weekoftheday1.getSelectedItem().toString(),
@@ -124,7 +135,8 @@ public class AddRoutine extends MainActivity implements java.io.Serializable {
                     exercise2.getText().toString(),exercise3.getText().toString(), exercise4.getText().toString(),Integer.parseInt(set1.getText().toString()),
                     Integer.parseInt(set2.getText().toString()), Integer.parseInt(set3.getText().toString()),Integer.parseInt(set4.getText().toString()),
                     Integer.parseInt(rep1.getText().toString()),Integer.parseInt(rep2.getText().toString()),
-                    Integer.parseInt(rep3.getText().toString()),Integer.parseInt(rep4.getText().toString())));
+                    Integer.parseInt(rep3.getText().toString()),Integer.parseInt(rep4.getText().toString()),Integer.parseInt(kg1.getText().toString()),Integer.parseInt(kg2.getText().toString()),
+                    Integer.parseInt(kg3.getText().toString()),Integer.parseInt(kg4.getText().toString())));
             Intent intent = new Intent(AddRoutine.this, MainActivity.class);
             intent.putExtra("arrayList", arrayList);
             startActivity(intent);

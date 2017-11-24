@@ -46,12 +46,12 @@
             android:layout_weight="1"
             android:text="STOP" />
 
-        <Button
-            android:id="@+id/btnLap"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Lap" />
+        <!--<Button-->
+            <!--android:id="@+id/btnLap"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Lap" />-->
 
     </LinearLayout>
 

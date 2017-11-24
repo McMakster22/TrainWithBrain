@@ -33,13 +33,17 @@ public class MainArrayListRoutine implements java.io.Serializable {  // allows t
     private int rep2;
     private int rep3;
     private int rep4;
-
+    private int kg1;
+    private int kg2;
+    private int kg3;
+    private int kg4;
 
 
     public MainArrayListRoutine(String name, String date, int id,
-    String weekday1, String weekday2, String muscLeGroup1, String muscLeGroup2,
-    String exercise1, String exercise2, String exercise3, String exercise4,
-    int set1, int set2, int set3, int set4, int rep1, int rep2, int rep3, int rep4
+                                String weekday1, String weekday2, String muscLeGroup1, String muscLeGroup2,
+                                String exercise1, String exercise2, String exercise3, String exercise4,
+                                int set1, int set2, int set3, int set4, int rep1, int rep2, int rep3, int rep4,
+                                int kg1, int kg2, int kg3, int kg4
 
 
     ) {
@@ -48,8 +52,8 @@ public class MainArrayListRoutine implements java.io.Serializable {  // allows t
         this.name = name;
         this.id = id;
 
-        this.weekday1= weekday1;
-        this.weekday2= weekday2;
+        this.weekday1 = weekday1;
+        this.weekday2 = weekday2;
         this.muscLeGroup1 = muscLeGroup1;
         this.muscLeGroup2 = muscLeGroup2;
         this.exercise1 = exercise1;
@@ -64,6 +68,10 @@ public class MainArrayListRoutine implements java.io.Serializable {  // allows t
         this.rep2 = rep2;
         this.rep3 = rep3;
         this.rep4 = rep4;
+        this.kg1 = kg1;
+        this.kg2 = kg2;
+        this.kg3 = kg3;
+        this.kg4 = kg4;
 
     }
 
@@ -143,6 +151,22 @@ public class MainArrayListRoutine implements java.io.Serializable {  // allows t
 
     public int getSet4() {
         return set4;
+    }
+
+    public int getKg1() {
+        return kg1;
+    }
+
+    public int getKg2() {
+        return kg2;
+    }
+
+    public int getKg3() {
+        return kg3;
+    }
+
+    public int getKg4() {
+        return kg4;
     }
 
     public void setDate(String date) {

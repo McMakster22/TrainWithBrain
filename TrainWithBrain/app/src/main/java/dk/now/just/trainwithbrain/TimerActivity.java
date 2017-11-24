@@ -46,7 +46,7 @@ public class TimerActivity extends MainActivity{
 
         btnStart = (Button)findViewById(R.id.btnStart);
         btnPause = (Button)findViewById(R.id.btnPause);
-        btnLap = (Button)findViewById(R.id.btnLap);
+        //btnLap = (Button)findViewById(R.id.btnLap);
         btnStop = (Button)findViewById(R.id.btnStop);
         txtTimer = (TextView) findViewById(R.id.timerValue);
         containerT = (LinearLayout)findViewById(R.id.containerT);
@@ -68,23 +68,24 @@ public class TimerActivity extends MainActivity{
             }
         });
 
-        btnLap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LayoutInflater inflater = (LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View addView = inflater.inflate(R.layout.trow,null);
-                TextView txtValue = addView.findViewById(R.id.txtContent);
-                txtValue.setText(txtTimer.getText());
-                containerT.addView(addView);
-            }
-        });
+//        btnLap.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                LayoutInflater inflater = (LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                View addView = inflater.inflate(R.layout.trow,null);
+//                TextView txtValue = addView.findViewById(R.id.txtContent);
+//                txtValue.setText(txtTimer.getText());
+//                containerT.addView(addView);
+//            }
+//        });
 
         btnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                timeSwapBuff=0;
                 customHandler.removeCallbacks(updateTimeThread);
                 txtTimer.setText("0:00:000");
+                startTime = SystemClock.currentThreadTimeMillis();
 
             }
         });

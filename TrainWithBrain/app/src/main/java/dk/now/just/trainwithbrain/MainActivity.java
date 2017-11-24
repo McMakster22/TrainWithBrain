@@ -49,12 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-    //DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRANCE);
 
     // Get the date today using Calendar object.
     Date today = Calendar.getInstance().getTime();
     // Using DateFormat format method we can create a string
-// representation of a date with the defined format.
+    // representation of a date with the defined format.
     String reportDate = df.format(today);
 
     /*Intent intent = new Intent(MainActivity.this, AddRoutine.class);*/
@@ -87,7 +86,11 @@ public class MainActivity extends AppCompatActivity {
                 DBContractClass.RoutinesEntry.Rep1,
                 DBContractClass.RoutinesEntry.Rep2,
                 DBContractClass.RoutinesEntry.Rep3,
-                DBContractClass.RoutinesEntry.Rep4
+                DBContractClass.RoutinesEntry.Rep4,
+                DBContractClass.RoutinesEntry.Kg1,
+                DBContractClass.RoutinesEntry.Kg2,
+                DBContractClass.RoutinesEntry.Kg3,
+                DBContractClass.RoutinesEntry.Kg4
 
         };
         Cursor cursor = db.query(
@@ -115,6 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 int rep2ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Rep2);
                 int rep3ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Rep3);
                 int rep4ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Rep4);
+                int kg1ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Kg1);
+                int kg2ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Kg2);
+                int kg3ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Kg3);
+                int kg4ColumnIndex = cursor.getColumnIndex(DBContractClass.RoutinesEntry.Kg4);
                 while (cursor.moveToNext()) {
                     int currentId = cursor.getInt(idColumnIndex);
                     String currentName = cursor.getString(nameColumnIndex);
@@ -135,8 +142,13 @@ public class MainActivity extends AppCompatActivity {
                     int curentRep2 = cursor.getInt(rep2ColumnIndex);
                     int curentRep3 = cursor.getInt(rep3ColumnIndex);
                     int curentRep4 = cursor.getInt(rep4ColumnIndex);
+                    int curentKg1 = cursor.getInt(kg1ColumnIndex);
+                    int curentKg2 = cursor.getInt(kg2ColumnIndex);
+                    int curentKg3 = cursor.getInt(kg3ColumnIndex);
+                    int curentKg4 = cursor.getInt(kg4ColumnIndex);
+
                     Ssingl.getInstance().getArray().add(new MainArrayListRoutine( currentName, curentDate, currentId,curentWorkDay,curentWorkDay2,curentMuscle1,curentMuscle2,curentEx1,curentEx2,curentEx3,curentEx4,curentSet1
-                    ,curentSet2,curentSet3,curentSet4,curentRep1,curentRep2,curentRep3,curentRep4));
+                    ,curentSet2,curentSet3,curentSet4,curentRep1,curentRep2,curentRep3,curentRep4, curentKg1,curentKg2,curentKg3,curentKg4));
 
                 }
 
@@ -194,6 +206,12 @@ public class MainActivity extends AppCompatActivity {
                         int rep3 = arrayList.get(z).getRep3();
                         int rep4 = arrayList.get(z).getRep4();
 
+                        int kg1 = arrayList.get(z).getKg1();
+                        int kg2 = arrayList.get(z).getKg2();
+                        int kg3 = arrayList.get(z).getKg3();
+                        int kg4 = arrayList.get(z).getKg4();
+
+
                         Intent intent = new Intent(MainActivity.this, Routines.class);
 
                         intent.putExtra("day", day);
@@ -217,6 +235,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("exercise2", ex2);
                         intent.putExtra("exercise3", ex3);
                         intent.putExtra("exercise4", ex4);
+
+                        intent.putExtra("kg1", kg1);
+                        intent.putExtra("kg2", kg2);
+                        intent.putExtra("kg3", kg3);
+                        intent.putExtra("kg4", kg4);
 
                         startActivity(intent);
 
@@ -372,6 +395,10 @@ public class MainActivity extends AppCompatActivity {
                 values.put(DBContractClass.RoutinesEntry.Rep2, Ssingl.getInstance().getArray().get(i).getRep2());
                 values.put(DBContractClass.RoutinesEntry.Rep3, Ssingl.getInstance().getArray().get(i).getRep3());
                 values.put(DBContractClass.RoutinesEntry.Rep4, Ssingl.getInstance().getArray().get(i).getRep4());
+                values.put(DBContractClass.RoutinesEntry.Kg1, Ssingl.getInstance().getArray().get(i).getKg1());
+                values.put(DBContractClass.RoutinesEntry.Kg2, Ssingl.getInstance().getArray().get(i).getKg2());
+                values.put(DBContractClass.RoutinesEntry.Kg3, Ssingl.getInstance().getArray().get(i).getKg3());
+                values.put(DBContractClass.RoutinesEntry.Kg4, Ssingl.getInstance().getArray().get(i).getKg4());
                 db.insert(DBContractClass.RoutinesEntry.TABLE_NAME, null, values);
             }
 
@@ -384,21 +411,13 @@ public class MainActivity extends AppCompatActivity {
         view.getTag();
         int j = (int) view.getTag();
         int i = Ssingl.getInstance().getArray().size() - 1;
-        //
+
 
         DbClass dbclass = new DbClass(this);
         SQLiteDatabase db = dbclass.getWritableDatabase();
         String selection = DBContractClass.RoutinesEntry.ID + " = ?";
         String[] selectionArgs = {j + ""};
         db.delete(DBContractClass.RoutinesEntry.TABLE_NAME, selection, selectionArgs);
-//        for (int x=0; x <= Ssingl.getInstance().getArray().size(); x++){
-//            if (x==j){
-//            Ssingl.getInstance().getArray().remove(i).getId();
-//            }
-//
-//        }
-
-
         if (j == i) {
             Ssingl.getInstance().getArray().remove(j).getId();
 

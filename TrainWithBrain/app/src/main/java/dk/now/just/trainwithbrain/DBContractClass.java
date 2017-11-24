@@ -28,12 +28,16 @@ public class DBContractClass {
         public static final String Exercise4 = "exercise4";
         public static final String Set1 = "set1";
         public static final String Set2 = "set2";
-        public static final String  Set3 = "set3";
+        public static final String Set3 = "set3";
         public static final String Set4 = "set4";
         public static final String Rep1 = "rep1";
         public static final String Rep2 = "rep2";
         public static final String Rep3 = "rep3";
         public static final String Rep4 = "rep4";
+        public static final String Kg1 = "kg1";
+        public static final String Kg2 = "kg2";
+        public static final String Kg3 = "kg3";
+        public static final String Kg4 = "kg4";
 
 
     }
